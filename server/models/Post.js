@@ -23,7 +23,7 @@ const postSchema = new mongoose.Schema(
             of: Boolean,
         },
         Comments:{
-            Types: Array,
+            Type: Array,
             default:[],
         }
     }, 
