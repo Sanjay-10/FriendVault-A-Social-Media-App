@@ -1,9 +1,10 @@
+import { Margin } from '@mui/icons-material';
 import React from 'react'
 
 const LoginPage = () => {
   return (
     <div>
-      LoginPage
+     <h1 >LoginPage</h1> 
     </div>
   )
 }
