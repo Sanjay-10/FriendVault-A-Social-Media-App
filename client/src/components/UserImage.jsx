@@ -1,4 +1,4 @@
-import { Box } from "@mui/icons-material";
+import { Box } from "@mui/material";
 
 const UserImage = ({ image, size = "60px"}) =>{
     return (
@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px"}) =>{
             width={size}
             height={size}
             alt="User"
-            src={`http://localhost:3000/assets/${image}`}
+            src={`http://localhost:3001/assets/${image}`}
             />
         </Box>
     );

@@ -87,7 +87,7 @@ const Navbar = () => {
           <Help sx = {{ fontSize: "25px"}} />
           <FormControl variant="standard" value={fullName}>
             <Select
-            value="fullName"
+            value={fullName}
             sx={{
               backgroundColor: neutralLight,
               width: "150px",
