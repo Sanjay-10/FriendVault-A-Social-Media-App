@@ -16,7 +16,7 @@ export const createPost = async (req, res) => {
             userPicturePath: user.picturePath,
             picturePath,
             likes: {},
-            comments: {}
+            comments: []
         })
         await newPost.save();
 
@@ -34,6 +34,7 @@ export const getFeedPosts = async (req, res) => {
     try {
         const post = await Post.find();
         res.status(201).json(post);
+ 
 
     } catch (error) {
         res.status(404).json({message: err.message});
