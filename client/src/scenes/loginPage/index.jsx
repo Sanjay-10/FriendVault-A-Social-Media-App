@@ -31,7 +31,7 @@ const LoginPage = () => {
           backgroundColor={theme.palette.background.alt}
         >
           <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem"}}>
-          Welcome to Sharely! Step in to connect, share, and explore your world.
+          Welcome to FriendVault! Step in to connect, share, and explore your world.
           </Typography>
           <Form/>
         </Box>

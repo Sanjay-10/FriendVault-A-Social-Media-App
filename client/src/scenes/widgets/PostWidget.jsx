@@ -11,6 +11,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
+import { DeleteOutline } from "@mui/icons-material";
 
 const PostWidget = ({
   postId,
@@ -20,8 +21,8 @@ const PostWidget = ({
   location,
   picturePath,
   userPicturePath,
-  likes,
-  comments,
+  likes = {},
+  comments = [],
 }) => {
   const [isComments, setIsComments] = useState(false);
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const PostWidget = ({
     const updatedPost = await response.json();
     dispatch(setPost({ post: updatedPost }));
   };
+
 
   return (
     <WidgetWrapper m="2rem 0">
@@ -84,13 +86,19 @@ const PostWidget = ({
             <IconButton onClick={() => setIsComments(!isComments)}>
               <ChatBubbleOutlineOutlined />
             </IconButton>
+
             <Typography>{comments.length}</Typography>
           </FlexBetween>
         </FlexBetween>
 
-        <IconButton>
+              <Box >
+        
+
+        <IconButton >
           <ShareOutlined />
         </IconButton>
+        </Box>
+
       </FlexBetween>
       {isComments && (
         <Box mt="0.5rem">
